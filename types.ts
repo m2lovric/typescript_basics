@@ -39,3 +39,22 @@ const json = '{"x" : 10, "y" : 20}';
 const coordinates: {x: number, y: number} = JSON.parse(json);
 
 console.log(coordinates);
+
+// 2. when we declare a variable on one line and initialize it later
+
+let words = ['red', 'green', 'blue'];
+let foundWord: boolean;
+
+for (let i = 0; i < words.length; i++) {
+  if ( words[i] === 'green') {
+    foundWord = true;
+  }
+}
+
+// 3. when we have a variable whose type can't be inferred correctly
+
+let numbers = [-10, -2, 23];
+let numberAboveZero: boolean | number = false;
+
+numbers.map(el => el > 0 ? numberAboveZero = el : false);
+console.log(numberAboveZero);
