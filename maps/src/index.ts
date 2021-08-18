@@ -1,5 +1,8 @@
-import User from './User';
+import { User } from './User';
+import { Company } from './Company';
 
-const user1 = new User();
-console.log(user1.name);
-console.log(user1.location);
+const user = new User();
+const company = new Company();
+
+console.log(user);
+console.log(company);
